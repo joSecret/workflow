@@ -1,0 +1,64 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Details">
+  <main>
+    <details open name="test">
+      <summary>Snickerdoodle</summary>
+      <div class="content">
+        Competently formulate corporate channels and premier innovation.
+        Dynamically facilitate interdependent e-services rather than strategic
+      </div>
+    </details>
+
+    <details name="test">
+      <summary>Maicenitas</summary>
+    </details>
+
+    <details name="test">
+      <summary>Sugar cookies</summary>
+       Yum yum sugar cookies.
+    </details>
+
+    <details name="test">
+      <summary>name tags</summary>
+      <div class="content">
+        New in Crome 120
+        <a href="https://developer.chrome.com/blog/new-in-chrome-120"
+          >New Crome 120</a
+        >
+      </div>
+    </details>
+  </main>
+</Layout>
+
+<style>
+  details {
+    width: 400px;
+
+    & > summary {
+      padding: 2px 6px;
+      background-color: lightgreen;
+      border: none;
+      box-shadow: 3px 3px 4px lightgray;
+      cursor: pointer;
+      /* width: 300px; */
+      list-style: none;
+    }
+
+    & > .content {
+      border-radius: 0 0 10px 10px;
+      background-color: lightblue;
+      max-width: 100%;
+      padding: 8px 16px;
+      margin: 0;
+      box-shadow: 3px 3px 4px lightgray;
+      /* width: 200px; */
+    }
+
+    & + details {
+      margin-top: 1rem;
+    }
+  }
+</style>

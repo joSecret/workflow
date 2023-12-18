@@ -1,0 +1,84 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title=":is(), :where(), :has()">
+  <main>
+    <div class="block block-view">
+      <h2 class="block--title">Block title</h2>
+      <div class="block--content">
+        <form action="">
+          <div class="w-input">
+            <input id="fname" type="checkbox" />
+            <label for="fname">First name</label>
+          </div>
+
+          <div class="w-input">
+            <input id="lname" type="checkbox" />
+            <label for="lname">Last name</label>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="block block-view">
+      <h3 class="block--title">Block title</h3>
+      <div class="block--content">
+        <div class="w-input">
+          <input id="fname" type="email" placeholder="your@email.com" />
+          <label for="fname">First name</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="block block-system">
+      <h2 class="block--title">Block title</h2>
+      <div class="block--content">block system</div>
+    </div>
+
+    <div class="block block-system">
+      <h3 class="block--title">Block title</h3>
+      <div class="block--content">block system</div>
+    </div>
+
+    <div class="block block-content">
+      <h2>Block title</h2>
+      <div class="block--content">block content</div>
+    </div>
+
+    <div class="block block-content">
+      <h3>Block title</h3>
+      <div class="block--content">block content</div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .block-view:has(input:checked) {
+    background-color: aquamarine;
+  }
+
+  input {
+    border: 10px solid gray;
+    padding: 8px;
+  }
+
+  input:valid {
+    border-color: green;
+  }
+
+  input:placeholder-shown {
+    border-color: darkmagenta;
+  }
+
+  input:invalid {
+    border-color: red;
+  }
+</style>
+
+<style>
+  .block {
+    border: 1px solid gray;
+    margin-bottom: 10px;
+  }
+</style>

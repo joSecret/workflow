@@ -1,0 +1,56 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Dialog">
+  <main>
+    <button data-open-modal>Open Dialog</button>
+
+    <dialog data-modal>
+      <form>
+        <input type="text" />
+        <button type="submit" formmethod="dialog">Cancel</button>
+        <button type="submit">Submit</button>
+      </form>
+    </dialog>
+  </main>
+   asdfasdfas
+</Layout>
+
+<style>
+  dialog {
+    width: 500px;
+    min-height: 300px;
+    border-radius: 1rem;
+
+    &::backdrop {
+      background-color: rgba(0, 0, 250, 0.5);
+    }
+  }
+</style>
+
+<script>
+  const openButton = document.querySelector("[data-open-modal]");
+  const closeButton = document.querySelector("[data-close-modal]");
+  const modal = document.querySelector("[data-modal]");
+
+  openButton.addEventListener("click", () => {
+    modal.show();
+  });
+
+  // closeButton.addEventListener("click", () => {
+  //   modal.close();
+  // });
+
+  modal.addEventListener("click", (e) => {
+    const dialogDimensions = modal.getBoundingClientRect();
+    if (
+      e.clientX < dialogDimensions.left ||
+      e.clientX > dialogDimensions.right ||
+      e.clientY < dialogDimensions.top ||
+      e.clientY > dialogDimensions.bottom
+    ) {
+      modal.close();
+    }
+  });
+</script>

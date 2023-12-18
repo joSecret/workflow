@@ -1,0 +1,293 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Flex vs grid: Grid list">
+  <main>
+    <div class="list-articles">
+      <article class="article">
+        <figure class="img">
+          <img
+            src="https://assets.codepen.io/547231/dinosaur-01.jpg"
+            height="540"
+            width="960"
+            alt=""
+          />
+        </figure>
+
+        <h2 class="title">
+          <a href="#"> Lorem ipsum dolor sit amet elit consectetur</a>
+        </h2>
+        <div class="teaser">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+            pretium tortor ac magna faucibus, vel condimentum urna vulputate.
+          </p>
+        </div>
+        <div class="article-meta">
+          <time>4 décembre 2023</time>
+        </div>
+      </article>
+
+      <article class="article">
+        <figure class="img">
+          <img
+            src="https://assets.codepen.io/547231/dinosaur-02.jpg"
+            height="540"
+            width="960"
+            alt=""
+          />
+        </figure>
+        <h2 class="title">Fusce massa quam, semper nec nisi in</h2>
+
+        <div class="article-meta">
+          <time>25 novembre 2023</time>
+        </div>
+      </article>
+
+      <article class="article">
+        <figure class="img">
+          <img
+            src="https://assets.codepen.io/547231/dinosaur-04.jpg"
+            height="540"
+            width="960"
+            alt=""
+          />
+        </figure>
+        <h2 class="title">Vestibulum aliquet tristique rhoncus</h2>
+
+        <div class="article-meta">
+          <time>2 novembre 2023</time>
+        </div>
+      </article>
+
+      <article class="article">
+        <figure class="img">
+          <img
+            src="https://assets.codepen.io/547231/dinosaur-03.jpg"
+            height="540"
+            width="960"
+            alt=""
+          />
+        </figure>
+        <h2 class="title">Nunc sagittis iaculis</h2>
+
+        <div class="article-meta">
+          <time>14 octobre 2023</time>
+        </div>
+      </article>
+
+      <article class="article">
+        <figure class="img">
+          <img
+            src="https://assets.codepen.io/547231/dinosaur-05.jpg"
+            height="540"
+            width="960"
+            alt=""
+          />
+        </figure>
+        <h2 class="title">Ut sapien turpis, elementum sed sodales</h2>
+
+        <div class="article-meta">
+          <time>22 septembre 2023</time>
+        </div>
+      </article>
+
+      <article class="article">
+        <figure class="img">
+          <img
+            src="https://assets.codepen.io/547231/dinosaur-06.jpg"
+            height="540"
+            width="960"
+            alt=""
+          />
+        </figure>
+        <h2 class="title">Ut sapien turpis, elementum sed sodales</h2>
+
+        <div class="article-meta">
+          <time>4 septembre 2023</time>
+        </div>
+      </article>
+
+      <article class="article">
+        <figure class="img">
+          <img
+            src="https://assets.codepen.io/547231/dinosaur-07.jpg"
+            height="540"
+            width="960"
+            alt=""
+          />
+        </figure>
+        <h2 class="title">Ut sapien turpis sodales</h2>
+
+        <div class="article-meta">
+          <time>14 juin 2023</time>
+        </div>
+      </article>
+
+      <article class="article">
+        <figure class="img">
+          <img
+            src="https://assets.codepen.io/547231/dinosaur-08.jpg"
+            height="540"
+            width="960"
+            alt=""
+          />
+        </figure>
+        <h2 class="title">Ut sapien turpis, elementum sed sodales eu</h2>
+        <div class="article-meta">
+          <time>18 mai 2023</time>
+        </div>
+      </article>
+
+      <article class="article">
+        <figure class="img">
+          <img
+            src="https://assets.codepen.io/547231/dinosaur-09.jpg"
+            height="540"
+            width="960"
+            alt=""
+          />
+        </figure>
+        <h2 class="title">Nunc fermentum, diam sed lobortis iaculis</h2>
+        <div class="article-meta">
+          <time>25 avril 2023</time>
+        </div>
+      </article>
+
+      <article class="article">
+        <figure class="img">
+          <img
+            src="https://assets.codepen.io/547231/dinosaur-10.jpg"
+            height="540"
+            width="960"
+            alt=""
+          />
+        </figure>
+        <h2 class="title">Nunc fermentum, diam sed lobortis iaculis</h2>
+        <div class="article-meta">
+          <time>4 avril 2023</time>
+        </div>
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  @media screen and (min-width: 40rem) {
+  }
+</style>
+
+<style>
+  :root {
+    --fs-lvl-1: clamp(1.875rem, 1.5rem + 1.5vw, 2.75rem);
+    --fs-lvl-2: clamp(1.625rem, 1.45rem + 0.85vw, 2.125rem);
+    --fs-lvl-3: clamp(1.375rem, 1.3rem + 0.4348vw, 1.625rem);
+    --fs-lvl-4: clamp(1.25rem, 1.15rem + 0.4348vw, 1.5rem);
+
+    --fs-body: clamp(1rem, 0.9rem + 0.4348vw, 1.125rem);
+    --fs-lead: clamp(1rem, 0.9rem + 0.4348vw, 1.25rem);
+    --fs-small: clamp(0.875rem, 0.8rem + 0.2vw, 1rem);
+
+    --fw-titles: 900;
+
+    --color-bg: #f6f5f4;
+    --color-bg-content: #fff;
+    --color-text: #000;
+    --color-text-sec: #858585;
+    --color-accent: #6a9c29;
+  }
+
+  * {
+    border: 0;
+    box-sizing: border-box;
+  }
+
+  main {
+    width: 1450px;
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    line-height: 1.3;
+    padding: 20px;
+  }
+
+  a {
+    color: var(--color-text);
+  }
+
+  p {
+    font-size: var(--fs-body);
+    margin-bottom: 1em;
+  }
+  :is(h1, h2, h3) {
+    font-family: var(--font-titles);
+    font-weight: var(--fw-titles);
+    margin-bottom: 0.75em;
+  }
+  h1 {
+    font-size: var(--fs-lvl-1);
+  }
+  h2 {
+    font-size: var(--fs-lvl-2);
+  }
+  h3 {
+    font-size: var(--fs-lvl-3);
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+
+  .article {
+    background: var(--color-bg-content);
+    padding: 1rem;
+
+    & .teaser {
+      margin-top: 0px;
+    }
+
+    &:not(.lead) {
+      .teaser {
+        display: none;
+      }
+    }
+  }
+
+  .article-meta {
+    color: var(--color-text-sec);
+
+    & p {
+      font-size: var(--fs-small);
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 40rem) {
+    article {
+      display: flex;
+      flex-direction: column;
+
+      & .title {
+        font-size: var(--fs-lvl-4);
+      }
+
+      &.lead .title {
+        font-size: var(--fs-lvl-2);
+      }
+    }
+
+    .article-meta {
+      margin-top: auto;
+    }
+  }
+</style>

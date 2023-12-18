@@ -1,0 +1,44 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Scroll-behavior">
+  <main>
+    <div class="container">
+      <p class="nav">
+        Scroll to:
+        <a href="#pageA">A</a>
+        <a href="#pageB">B</a>
+        <a href="#pageC">C</a>
+      </p>
+      <div class="scroll-container inset aspect-ratio">
+        <div class="scroll-page" id="pageA">A</div>
+        <div class="scroll-page" id="pageB">B</div>
+        <div class="scroll-page" id="pageC">C</div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .scroll-container {
+    border: 1px solid #000;
+    display: block;
+    overflow-y: scroll;
+    height: 200px;
+    width: 200px;
+  }
+
+  .scroll-page {
+    align-items: center;
+    display: flex;
+    font-size: 5em;
+    height: 100%;
+    justify-content: center;
+  }
+
+  .scroll-container {
+    /* scroll-behavior: auto; */
+    scroll-behavior: smooth;
+  }
+</style>

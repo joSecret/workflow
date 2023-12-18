@@ -1,0 +1,55 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Flex vs Grid: Intro">
+  <main class="container">
+    <div class="flex">
+      <div>Test.</div>
+      <div>Saepe dolor fugit ducimus similique.</div>
+      <div>Quibusdam corporis eos quia ipsam?</div>
+      <div>Dicta rem vel saepe fugit?</div>
+      <div>Iste repellat consequatur voluptatem vero!</div>
+      <div>Sint consequatur ex numquam voluptatem.</div>
+      <div>Harum asperiores veniam illum provident.</div>
+      <div>Laudantium sapiente quae atque consequatur?</div>
+      <div>Veritatis iure quam minima soluta.</div>
+      <div>Iure consequatur mollitia est excepturi?</div>
+    </div>
+
+    <div class="grid">
+      <div>Test.</div>
+      <div>Saepe dolor fugit ducimus similique.</div>
+      <div>Quibusdam corporis eos quia ipsam?</div>
+      <div>Dicta rem vel saepe fugit?</div>
+      <div>Iste repellat consequatur voluptatem vero!</div>
+      <div>Sint consequatur ex numquam voluptatem.</div>
+      <div>Harum asperiores veniam illum provident.</div>
+      <div>Laudantium sapiente quae atque consequatur?</div>
+      <div>Veritatis iure quam minima soluta.</div>
+      <div>Iure consequatur mollitia est excepturi?</div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .flex {
+    /* display: flex; */
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  div {
+    &.flex {
+      margin-bottom: 20px;
+    }
+
+    &:not([class]) {
+      outline: 2px solid black;
+      padding: 8px;
+    }
+  }
+</style>

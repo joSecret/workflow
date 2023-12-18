@@ -1,0 +1,63 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="Workflow frontend.">
+  <main>
+    <h1>
+      New in
+      <span class="text-gradient">CSS</span>
+    </h1>
+
+    <ul role="list" class="link-card-grid">
+      <Card href="/newcss/scroll-behavior" title="Scroll-behavior" body="" />
+      <Card
+        href="/newcss/aspect-ratio"
+        title="aspect-ratio -- s/l/d - vw/vh"
+        body=""
+      />
+      <Card href="/newcss/details" title="<details>" body="" />
+      <Card href="/newcss/dialog" title="<dialog>" body="" />
+      <Card href="/newcss/is" title=":is() :where() :has()" body="" />
+    </ul>
+
+    <h1>
+      <span class="text-gradient">Flex</span>
+       vs
+      <span class="text-gradient">Grid</span>
+    </h1>
+
+    <ul role="list" class="link-card-grid">
+      <Card
+        href="/flexvsgrid/flexgrid"
+        title="Flex vs grid"
+        body="Flexbox and grid are two fantastic layout tools. It can be hard to know which one to pick."
+      />
+      <Card
+        href="/flexvsgrid/flexgrid-nav"
+        title="Flex vs grid: Nav"
+        body="Flexbox vs grid Navigation example"
+      />
+      <Card
+        href="/flexvsgrid//itc-list"
+        title="Flex vs grid: Grid list"
+        body="Grid with first item bigger"
+      />
+      <Card
+        href="/flexvsgrid//sk-sdgs"
+        title="SDGs example"
+        body="Grid example with animation"
+      />
+    </ul>
+  </main>
+</Layout>
+
+<style>
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+  }
+</style>

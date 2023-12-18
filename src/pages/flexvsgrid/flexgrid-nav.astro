@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Flex vs Grid: Nav">
+  <main>
+    <nav>
+      <h3>Flex</h3>
+      <ul class="nav-list flex">
+        <li><a href="/">Home</a></li>
+        <li><a href="/">About us</a></li>
+        <li><a href="/">Service information goes here</a></li>
+        <li><a href="/">Blog</a></li>
+        <li><a href="/">Contact</a></li>
+      </ul>
+    </nav>
+
+    <nav>
+      <h3>Grid</h3>
+      <ul class="nav-list grid">
+        <li><a href="/">Home</a></li>
+        <li><a href="/">About us</a></li>
+        <li><a href="/">Service information goes here</a></li>
+        <li><a href="/">Blog</a></li>
+        <li><a href="/">Contact</a></li>
+      </ul>
+    </nav>
+  </main>
+</Layout>
+
+<style>
+  .flex {
+    /* display: flex; */
+  }
+
+  .grid {
+    /* display: grid; */
+  }
+
+  div {
+    &.flex {
+      margin-bottom: 20px;
+    }
+
+    &:not([class]) {
+      outline: 2px solid black;
+      padding: 8px;
+    }
+  }
+</style>
+
+<style>
+  nav {
+    border: 3px solid lightgreen;
+    margin-bottom: 2rem;
+  }
+
+  nav > h3 {
+    margin: 0;
+    border: 3px solid lightpink;
+  }
+
+  nav li {
+    border: 3px solid lightgrey;
+  }
+
+  .nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+</style>
